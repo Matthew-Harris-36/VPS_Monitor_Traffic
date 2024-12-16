@@ -41,8 +41,8 @@ yum update && yum install -y iptables bc vnstat
 # 试运行脚本
 bash monitor_traffic.sh 200 90 1 1 1022 eth0
 
-# 添加计划任务，每分钟运行一次脚本，并将脚本的输出重定向到 /root/脚本日志.txt 文件
-(crontab -l ; echo "* * * * * /root/monitor_traffic.sh 190 3 > /root/脚本日志.txt")  | crontab -
+# 添加计划任务，每分钟运行一次脚本，并将脚本的输出重定向到 /root/脚本日志.txt 文件，请根据需要自行修改参数。
+(crontab -l ; echo "* * * * * /root/monitor_traffic.sh 200 90 1 1 1022 eth0 > /root/脚本日志.txt")  | crontab -
 ```
 
 
