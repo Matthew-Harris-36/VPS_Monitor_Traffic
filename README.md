@@ -29,16 +29,14 @@ bash traffic_monitor.sh 200 90 1 1 1022 eth0
 ## 运行命令
 
 ```
-# 请先切换到 root 用户，将 traffic_monitor.sh 下载到/root目录，并执行下列命令
+# 请切换到 root 用户，在家目录执行下列命令
+wget https://github.com/Matthew-Harris-36/VPS_Monitor_Traffic/raw/refs/heads/master/monitor_traffic.sh && chmod +x monitor_traffic.sh
 
 # 安装必须软件。iptables 是用于配置 Linux 内核防火墙的工具，bc 是一个任意精度的计算器语言，vnstat 是一个控制台下的网络流量监控工具
 # Debian系安装命令
 apt-get update && apt-get install -y iptables bc vnstat
 # RedHat系安装命令
 yum update && yum install -y iptables bc vnstat
-
-# 添加可执行权限
-chmod +x monitor_traffic.sh
 
 # 试运行脚本
 bash monitor_traffic.sh 200 90 1 1 1022 eth0
